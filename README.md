@@ -1,6 +1,6 @@
 # Magento2 Region
 
-The module is the core of a kit of extensions for regions manage. This module is installed as part of [Eriocnemis Region Kit](https://github.com/eriocnemis/m2.RegionKit). It cannot be deleted or disabled.
+The module is the core of a kit of extensions for regions manage. The module provides basic functionality of regions manage as well as bulk operations. This module is installed as part of [Eriocnemis Region Kit](https://github.com/eriocnemis/m2.RegionKit). It cannot be deleted or disabled.
 
 ## Extensibility
 
