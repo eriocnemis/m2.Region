@@ -1,98 +1,11 @@
 # Magento2 Region
 
-The extension allows you to manage geographic regions.  For each country, you can add the any region, whose name is based on a specific locale.
+The module is the core of a kit of extensions for regions manage. This module is installed as part of [Eriocnemis Region Kit](https://github.com/eriocnemis/m2.RegionKit). It cannot be deleted or disabled.
 
-## Compatibility
+## Extensibility
 
-Version | 2.0.* | 2.1.* | 2.2.* | 2.3.* | 2.4.*
---- | --- | --- | --- | --- | ---
-Magento Community | - | - | - | :heavy_check_mark: | :heavy_check_mark:
-Magento Enterprise | - | - | - | :heavy_check_mark: | :heavy_check_mark:
-Magento Cloud | - | - | - | :heavy_check_mark: | :heavy_check_mark:
-Extension version | - | - | - | [2.3.1](https://github.com/eriocnemis/m2.Region/archive/2.3.1.zip) | [2.4.1](https://github.com/eriocnemis/m2.Region/archive/2.4.1.zip)
+Extension developers can interact with the this module. For more information about the Magento extension mechanism, see [Magento plug-ins](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/plugins.html).
 
-## Install
-
-#### Install via Composer
-
-1. Go to Magento2 root folder
-
-2. Enter following commands to install module:
-
-     For Magento CE 2.3.x
-
-    ```bash
-    composer require eriocnemis/module-region-kit:2.3.*
-    ```
-     For Magento CE 2.4.x
-
-    ```bash
-    composer require eriocnemis/module-region-kit:2.4.*
-    ```
-
-   Wait while dependencies are updated.
-
-#### Completion of installation
-
-1. Go to Magento2 root folder
-
-2. Enter following commands:
-
-    ```bash
-    php bin/magento setup:upgrade
-    php bin/magento setup:di:compile
-    php bin/magento setup:static-content:deploy (optional)
-    ```
-## Usage
-
-### Menu
-
-*Stores > Geography > Regions*.
-
-### Region Edit Page: general tab
-
-<img alt="Magento2 Region" src="http://eriocnemis.com/image/m2/directory/region.general.png" style="width:100%"/>
-
-### Region Edit Page: labels tab
-
-<img alt="Magento2 Region" src="http://eriocnemis.com/image/m2/directory/region.label.png" style="width:100%"/>
-
-### Region Grid Page
-
-<img alt="Magento2 Region" src="http://eriocnemis.com/image/m2/directory/regions.png" style="width:100%"/>
-
-## Related Modules
-
-[Region Import Export](https://github.com/eriocnemis/m2.RegionImportExport) - The extension allows admin to quickly import regions via a CSV file by one click. This simplifies the data update process of regions.
-
-## Uninstall
-
-You can uninstall a module only if you’re certain you won’t use it. Instead of uninstalling a module, you can disable it. Pleace, create backup so you can recover the data at a later time.
-
-#### Uninstall via Composer
-
-1. Go to Magento2 root folder
-
-2. Enter following commands to remove:
-
-    ```bash
-    composer remove eriocnemis/module-region-kit
-    ```
-#### Manual Uninstall
-
-1. Remove the folder {Magento root}/app/code/Eriocnemis/Region
-
-#### Completion of uninstall
-
-1. Go to Magento2 root folder
-
-2. Enter following commands:
-
-    ```bash
-    php bin/magento setup:upgrade
-    php bin/magento setup:di:compile
-    php bin/magento setup:static-content:deploy (optional)
-    ```
 ## License
 
 All Free Eriocnemis extensions is distributed under the [Open Software License (OSL 3.0)](https://github.com/eriocnemis/m2.Region/blob/master/LICENSE.md), and is thus open source software.
