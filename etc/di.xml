@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Eriocnemis, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- web api preference -->
+    <preference for="Eriocnemis\RegionApi\Api\Data\RegionInterface" type="Eriocnemis\Region\Model\Data\Region"/>
+    <preference for="Eriocnemis\RegionApi\Api\Data\LabelInterface" type="Eriocnemis\Region\Model\Data\Label"/>
+    <preference for="Eriocnemis\RegionApi\Api\Data\RegionSearchResultInterface" type="Eriocnemis\Region\Model\Data\RegionSearchResult"/>
+    <preference for="Eriocnemis\RegionApi\Api\SaveRegionInterface" type="Eriocnemis\Region\Model\SaveRegion"/>
+    <preference for="Eriocnemis\RegionApi\Api\GetRegionByIdInterface" type="Eriocnemis\Region\Model\GetRegionById"/>
+    <preference for="Eriocnemis\RegionApi\Api\GetRegionListInterface" type="Eriocnemis\Region\Model\GetRegionList"/>
+    <preference for="Eriocnemis\RegionApi\Api\DeleteRegionByIdInterface" type="Eriocnemis\Region\Model\DeleteRegionById"/>
+    <preference for="Eriocnemis\RegionApi\Api\ValidateRegionInterface" type="Eriocnemis\Region\Model\ValidateRegion"/>
+    <!-- api preference -->
+    <preference for="Eriocnemis\Region\Api\ConvertDataToRegionInterface" type="Eriocnemis\Region\Model\ConvertDataToRegion"/>
+    <preference for="Eriocnemis\Region\Api\ConvertRegionToDataInterface" type="Eriocnemis\Region\Model\ConvertRegionToData"/>
+    <preference for="Eriocnemis\Region\Api\AttachLabelToRegionInterface" type="Eriocnemis\Region\Model\ResourceModel\AttachLabelToRegion"/>
+    <preference for="Eriocnemis\Region\Api\DetachLabelFromRegionInterface" type="Eriocnemis\Region\Model\ResourceModel\DetachLabelFromRegion"/>
+    <preference for="Eriocnemis\Region\Api\GetLabelsByRegionIdInterface" type="Eriocnemis\Region\Model\ResourceModel\GetLabelsByRegionId"/>
+    <preference for="Eriocnemis\Region\Api\GetLabelsByRegionIdsInterface" type="Eriocnemis\Region\Model\ResourceModel\GetLabelsByRegionIds"/>
+    <preference for="Eriocnemis\Region\Model\Region\ValidatorInterface" type="Eriocnemis\Region\Model\Region\Validator"/>
+    <!-- validator configuration -->
+    <type name="Eriocnemis\Region\Model\Region\Validator">
+        <arguments>
+            <argument name="validators" xsi:type="array">
+                <item name="name" xsi:type="object">Eriocnemis\Region\Model\Region\Validator\DefaultNameValidator</item>
+                <item name="code" xsi:type="object">Eriocnemis\Region\Model\Region\Validator\CodeValidator</item>
+                <item name="country" xsi:type="object">Eriocnemis\Region\Model\Region\Validator\CountryValidator</item>
+                <item name="label" xsi:type="object">Eriocnemis\Region\Model\Region\Validator\LabelValidator</item>
+            </argument>
+        </arguments>
+    </type>
+    <!-- plugin -->
+    <type name="Magento\Directory\Model\ResourceModel\Region\Collection">
+        <plugin name="eriocnemis_region" type="Eriocnemis\Region\Plugin\Directory\Model\ResourceModel\Region\CollectionPlugin"/>
+    </type>
+</config>

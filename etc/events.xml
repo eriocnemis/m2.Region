@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Eriocnemis, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="eriocnemis_region_collection_load_after">
+        <observer name="eriocnemis_region" instance="Eriocnemis\Region\Observer\LoadLabelsObserver"/>
+    </event>
+    <event name="eriocnemis_region_load_after">
+        <observer name="eriocnemis_region" instance="Eriocnemis\Region\Observer\LoadLabelObserver"/>
+    </event>
+    <event name="eriocnemis_region_save_after">
+        <observer name="eriocnemis_region" instance="Eriocnemis\Region\Observer\SaveLabelObserver"/>
+    </event>
+</config>
