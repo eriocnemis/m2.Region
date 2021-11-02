@@ -47,6 +47,7 @@ class CountryValidator implements ValidatorInterface
      *
      * @param RegionInterface $region
      * @return ValidationResult
+     * @SuppressWarnings(PHPMD.ElseExpression)
      */
     public function validate(RegionInterface $region): ValidationResult
     {

@@ -82,9 +82,8 @@ class GetRegionList implements GetRegionListInterface
         $collection = $this->collectionFactory->create();
         if (null === $searchCriteria) {
             $searchCriteria = $this->searchCriteriaBuilder->create();
-        } else {
-            $this->collectionProcessor->process($searchCriteria, $collection);
         }
+        $this->collectionProcessor->process($searchCriteria, $collection);
 
         $items = [];
         /** @var \Eriocnemis\Region\Model\Region $model */

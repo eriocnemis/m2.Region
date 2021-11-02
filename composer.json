@@ -3,10 +3,12 @@
     "description": "The module is the core of a kit of extensions for regions manage. The module provides basic functionality of regions manage as well as bulk operations.",
     "type": "magento2-module",
     "version": "2.4.1",
-    "authors": [{
-        "name": "Eriocnemis Team",
-        "email": "dev.eriocnemis@gmail.com"
-    }],
+    "authors": [
+        {
+            "name": "Eriocnemis Team",
+            "email": "dev.eriocnemis@gmail.com"
+        }
+    ],
     "license": [
         "OSL-3.0"
     ],

@@ -151,14 +151,7 @@ class Region extends AbstractExtensibleObject implements RegionInterface
      */
     public function getExtensionAttributes()
     {
-        /** @var \Eriocnemis\RegionApi\Api\Data\RegionExtensionInterface $extensionAttributes */
-        $extensionAttributes = $this->_getExtensionAttributes();
-        if (null === $extensionAttributes) {
-            /** @var \Eriocnemis\RegionApi\Api\Data\RegionExtensionInterface $extensionAttributes */
-            $extensionAttributes = $this->extensionFactory->create(RegionInterface::class);
-            $this->setExtensionAttributes($extensionAttributes);
-        }
-        return $extensionAttributes;
+        return $this->_getExtensionAttributes();
     }
 
     /**

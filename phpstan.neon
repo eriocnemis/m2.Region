@@ -1,0 +1,7 @@
+parameters:
+    checkExplicitMixedMissingReturn: true
+    checkPhpDocMissingReturn: true
+    reportUnmatchedIgnoredErrors: false
+    ignoreErrors:
+        - '#Method (?:.*?) should return (?:.*?) but returns Magento\\Framework\\Api\\ExtensionAttributesInterface.#'
+        - '#has parameter \$collection with no value type specified in iterable type Magento\\Framework\\App\\ResourceConnection\\SourceProviderInterface.#'

@@ -83,7 +83,6 @@ class ConvertRegionToData implements ConvertRegionToDataInterface
     private function convertExtensionAttributesToObject(array $data)
     {
         if (isset($data['extension_attributes']) && is_array($data['extension_attributes'])) {
-            /** @var RegionExtensionFactory $attributes */
             $data['extension_attributes'] = $this->extensionFactory->create(['data' => $data['extension_attributes']]);
         }
         return $data;

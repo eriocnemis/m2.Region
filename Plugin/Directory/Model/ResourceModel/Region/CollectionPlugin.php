@@ -21,6 +21,7 @@ class CollectionPlugin
      * @param bool $printQuery
      * @param bool $logQuery
      * @return mixed[]
+     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
      */
     public function beforeLoadWithFilter(
         SourceProviderInterface $collection,
