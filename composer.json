@@ -17,7 +17,7 @@
         "magento/framework": "103.0.*",
         "magento/module-config": "101.2.*",
         "magento/module-directory": "100.4.*",
-        "eriocnemis/module-region-api": "2.4.2"
+        "eriocnemis/module-region-api": "*"
     },
     "autoload": {
         "files": [
